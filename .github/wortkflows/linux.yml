@@ -1,0 +1,39 @@
+name: Linux
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-24.04
+        python-version:
+          # - "3.9"
+          # - "3.10"
+          # - "3.11"
+          # - "3.12"
+          - "3.13"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install
+        run: |
+          python3 -m pip install -U pip
+          python3 -m pip install .
+
+      - name: Run as module
+        run: python3 -m ptheywoodtestpypi 
+
+      - name: Run executable
+        run: ptheywoodtestpypi
