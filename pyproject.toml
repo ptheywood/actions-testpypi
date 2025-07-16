@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ptheywoodtestpypi"
+version = "0.0.1"
+requires-python = ">= 3.9"
+authors = [
+    {name = "Peter Heywood", email = "p.heywood@sheffield.ac.uk"},
+]
+maintainers = [
+    {name = "Peter Heywood", email = "p.heywood@sheffield.ac.uk"},
+]
+readme = "readme.md"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+
+]
+
+[project.urls]
+Repository = "https://github.com/ptheywood/actions-testpypi"
+Issues = "https://github.com/ptheywood/actions-testpypi/issues"
+
+[project.scripts]
+ptheywoodtestpypi = "ptheywoodtestpypi.foo:foo"
