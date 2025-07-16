@@ -43,4 +43,7 @@ jobs:
       run: python3 -m pip install build --user
 
     - name: Build the distribution (sdist and bdist)
-      run: python3 -m build 
+      run: python3 -m build
+    
+    - name: test installing
+      run: python3 -m pip install $(find dist -name "*.whl" -print -quit)
