@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ptheywoodtestpypi"
-version = "0.0.1"
+version = "0.0.2"
 requires-python = ">= 3.9"
 authors = [
     {name = "Peter Heywood", email = "p.heywood@sheffield.ac.uk"},

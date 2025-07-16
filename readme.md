@@ -7,3 +7,9 @@ This is in advance of setting this up for a real python package which will publi
 This was using the following guide from the Python Packaging User guide:
 
 https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+
+If the current testpypi includes a copy of the package, it should be installable via:
+
+```bash
+python3 -m pip install --index-url https://test.pypi.org/simple/ ptheywoodtestpypi
+```
